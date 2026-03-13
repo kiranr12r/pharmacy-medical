@@ -1,0 +1,107 @@
+/* ---------------- DOCTORS SECTION ---------------- */
+
+.doctors {
+  padding: 60px 20px; /* ✅ reduced */
+  background: linear-gradient(to bottom, #ffffff, #f6fefe);
+  text-align: center;
+}
+
+.doctors h2 {
+  font-size: 2.4rem;
+  color: #004d40;
+  margin-bottom: 8px;
+}
+
+.doctors-subtitle {
+  max-width: 520px; /* ✅ readable width */
+  margin: 0 auto 32px; /* ✅ less vertical space */
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Wrapper to center single doctor */
+.doctor-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------- DOCTOR CARD ---------------- */
+
+.doctor-card {
+  background: #ffffff;
+  padding: 32px 28px; /* ✅ tighter */
+  border-radius: 20px;
+  max-width: 340px; /* ✅ slightly smaller */
+  text-align: center;
+  position: relative;
+}
+
+/* FRAME EFFECT */
+.doctor-card.framed {
+  border: 2px solid rgba(0, 121, 107, 0.25);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Glow on hover */
+.doctor-card.framed:hover {
+  border-color: #00796b;
+  box-shadow:
+    0 22px 48px rgba(0, 121, 107, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* ---------------- IMAGE ---------------- */
+
+.doctor-img {
+  width: 120px;
+  height: 120px; /* ✅ perfect circle */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 4px solid #e0f2f1;
+}
+
+/* ---------------- TEXT ---------------- */
+
+.doctor-card h3 {
+  color: #00796b;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.doctor-card p {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.doctor-card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Branch info */
+.doctor-branches {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+  .doctors {
+    padding: 48px 16px;
+  }
+
+  .doctors h2 {
+    font-size: 2rem;
+  }
+
+  .doctor-card {
+    padding: 28px 22px;
+  }
+}

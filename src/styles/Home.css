@@ -1,0 +1,196 @@
+/* ---------------- HERO SECTION ---------------- */
+
+.hero {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  overflow: hidden;
+}
+
+/* Background image with light opacity */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(224, 247, 250, 0.85)
+    ),
+    url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Layout wrapper */
+.hero-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ---------------- LEFT CONTENT ---------------- */
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #004d40;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-btn {
+  background: #00796b;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 121, 107, 0.35);
+}
+
+.secondary-btn {
+  border: 2px solid #00796b;
+  color: #00796b;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #00796b;
+  color: #ffffff;
+}
+
+/* ---------------- RIGHT IMAGE ---------------- */
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
+.hero-logo {
+  width: 350px;
+  margin-bottom: 20px;
+  border-radius: 20%;
+}
+
+@media (max-width: 900px) {
+  .hero-logo {
+    margin: 0 auto 20px;
+  }
+}
+/* ---------------- BRANCHES ---------------- */
+
+.branches {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.branches h2 {
+  font-size: 2.4rem;
+  color: #004d40;
+  margin-bottom: 40px;
+}
+
+.branches-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.branch-card {
+  background: #f9fefe;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.branch-card h3 {
+  color: #00796b;
+  margin-bottom: 12px;
+}
+
+.branch-card p {
+  color: #444;
+  line-height: 1.6;
+}
+.hero-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
